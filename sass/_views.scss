@@ -1,0 +1,125 @@
+@import "./mixins";
+@import "./variables";
+
+.circ-btn{
+	@include circ-button($white);
+	//display: inline-block;
+	//padding-top: 10px;
+	&:hover:before{
+		border-color: $color1;
+    	border-top-color: transparent;
+	}
+}
+.magic-btn{
+	@include magic-button($color1, $color1, 1px);
+}
+.magic-btn-black{
+	@include magic-button($black, $black, 1px);
+	&:hover{
+		color: $black;
+	}
+}
+
+.arrow-btn{
+	@include magic-button($white, $white, 2px);
+	display: inline-block;
+	padding-top: 6px;
+	font-size: 18px;
+	text-transform: capitalize;
+		border-radius: 200px;
+	&:before {
+		height: 100%;
+	}
+	.arrow-icon:after,
+	.arrow-icon:before {
+		content: "";
+		position: absolute;
+		top: -5px;
+		right: 2px;
+		width: 12px;
+		height: 12px;
+	}
+}
+
+.arrow-circ-btn{
+	color: $white;
+	position: relative;
+	display: inline-block;
+	transition: 0.3s;
+	//font-family: $sans;
+	cursor: pointer;
+	&:focus{
+		box-shadow: none;
+		outline: none;
+	}
+	&:after{
+		position: absolute;
+		content: "";
+	}
+	.txt{
+		display: inline-block;
+		padding: 8px 0;
+		padding-right: 4px;
+	}
+	.arrow-icon{
+		display: inline-block;
+		vertical-align: middle;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 1;
+		font-size: 18px;
+		position: relative;
+		color: $white;
+		border-radius: 40px;
+		transition: 0.3s;
+		&:after{
+			position: absolute;
+			top: 14px;
+			left: 12px;
+			height: 12px;
+			width: 12px;
+			z-index: -1;
+			content: "";
+			border: 2px solid $white;
+			border-top: none;
+			border-left: none; 
+			transform: rotate(-45deg);
+			transition: 0.3s;
+		}
+		&:before{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			content: "";
+			border-radius: 40px;
+			border: 2px solid $white;
+			border-color: $white;
+			border-left-color: transparent;
+			transition: 0.3s;
+		}
+	}
+		
+	
+	&:focus,
+	&:hover{
+		color: $white;
+		opacity: 0.8;
+		.arrow-icon{
+			color: $white;
+			&:before{
+				transform: rotate(-180deg);
+				border-color: $color1;
+				border-left-color: transparent;
+			}
+			&:after{
+				left: 15px;
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
+

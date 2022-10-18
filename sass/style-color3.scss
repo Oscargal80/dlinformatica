@@ -1,0 +1,217 @@
+/* Alternative colors : white background and dark text */
+/* 
+	color1 : #00BCD4;
+	color2 : #033339;
+*/
+$color1 : #0093d4;;
+$textColor : #00293b;
+
+/* Header */
+.header-top{
+	.logo-wrapper{
+		.logo{
+			color: $textColor;
+			.desc{
+				color: $color1;
+			}
+		}
+	}
+}
+/* menu */
+.menu-icon {
+    background: transparentize($textColor,0.8);
+    border-color: $textColor;
+}
+.menu-icon .bars .bar1, .menu-icon .bars .bar2, .menu-icon .bars .bar3{
+	background: $textColor;
+}
+.menu-links{
+	background: $color1;
+	@media(min-width: 601px){
+		background: transparent;
+	}
+}
+.menu-links{
+	.links{
+		li{
+			@media(min-width: 601px){
+				a{
+					color: $textColor;
+					&:hover,
+					&.menu-visible,
+					&:active{
+						color: transparentize($textColor,0.6);
+						@media(min-width: 601px){
+							color: transparentize($color1,0.6);
+						}
+					}
+				}
+				&.cta{
+					a{
+						color: $color1;
+						border-color: $color1;
+						&:hover{
+							border-color: $color1;
+							background: transparentize($color1,0.9);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* clock */
+.clock:before{
+	border-top-color: $color1;
+}
+.clock:after{
+	border-color: $color1;
+}
+.clock .clock-wrapper .tile .days,
+.clock .clock-wrapper .tile .hours, 
+.clock .clock-wrapper .tile .minutes,
+.clock .clock-wrapper .tile .seconds{
+	border-bottom-color: $color1;
+}
+/* main page */
+body{
+	color: $textColor;
+}
+.section .content .c-right:before {
+	@media (min-width: 801px) {
+	 	background: transparentize($textColor, 0.9);
+	}
+}
+
+.section .content .title-desc .title h2{
+	color: $textColor;
+}
+.section .content .title-desc h3,
+.section .content .item-desc h3,
+.section .content .c-features-list li h3{
+	color: $textColor;
+}
+.section-home .content .title-desc h3{
+	color: $color1;
+}
+.section-contact .content .item-desc a,
+.section-contact .content .c-form .form .fields label.error{
+	color: $color1;
+}
+.section .content .c-features-list li:before{
+	background: $color1;
+}
+.section .content .c-features-list li:after{
+	border-color: $color1;
+}
+.section .content .c-features-list li h4{
+	color: $color1;
+}
+.section .content .c-features-list li .desc p{
+	color: $textColor;
+}
+.section-contact .content .c-form .form .fields label{
+	color: $color1;
+}
+.section-contact .content .c-form .form .fields input{
+	color: $textColor;
+	border-bottom-color: $textColor;
+	background: transparentize($textColor, 0.9);
+}
+.section-contact .content .c-form .form .fields textarea{
+	background: transparentize($textColor, 0.9);
+}
+.section .anim .item-desc h3:before{
+	background: $textColor;
+}
+/* footer */
+.site-footer .note .marked,
+.site-footer .note a{
+	color: $color1;
+	text-decoration: underline;
+}
+.scrolldown a:after{
+	background: $color1;
+}
+.site-footer .subscription .form .input{
+	border-color: $color1;
+	color: $textColor;
+}
+.scrolldown a,
+.site-footer .subscription .form label{
+	color: $color1;
+}
+/* Buttons */
+.magic-btn{
+	color: $color1;
+}
+.arrow-circ-btn{
+	color: $textColor;
+}
+
+.arrow-circ-btn .arrow-icon:after{
+	border-color: $textColor;
+}
+.arrow-circ-btn .arrow-icon:before{
+	border-color: $color1;
+	border-left-color: transparent;
+}
+.arrow-circ-btn:hover{
+	color: $color1;
+}
+.arrow-circ-btn:hover .arrow-icon:after{
+	border-color: $color1;
+}
+.arrow-circ-btn:focus .arrow-icon:before, 
+.arrow-circ-btn:hover .arrow-icon:before{
+	border-color:  $textColor;
+    border-left-color: transparent;
+}
+.circ-btn{
+	color: $textColor;
+}
+.circ-btn:before{
+	border-color: $color1;
+	border-top-color: transparent;
+}
+.circ-btn:hover:before{
+	border-color: $textColor;
+	border-top-color: transparent;
+}
+.circ-btn:hover{
+	color: $color1;
+}
+/* Nav dots and Slider indication */
+#fp-nav ul li a.active:hover span, 
+#fp-nav ul li a span{
+	border-color: $textColor;
+}
+#fp-nav ul li a.active span, 
+#fp-nav ul li a.active:hover span{
+	border-color: $color1;
+}
+#fp-nav ul li a:hover span{
+	border-color: transparentize($color1,0.9);
+}
+.section .content .wrapper .swiper-pagination-bullet:hover, 
+.section .content .wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background: $color1;
+}
+.section .content .wrapper .swiper-pagination-bullet:hover:before,
+.section .content .wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+	border-color: $color1;
+}
+.section .content .wrapper .items-nav-container .items-button a:after{
+	background: $color1;
+}
+.section .content .wrapper .items-nav-container .items-button a,
+.section .content .wrapper .items-nav-container .items-button a:hover{
+	color: $textColor;
+}
+.section .content .wrapper .items-nav-container .items-button:after,
+.section .content .wrapper .swiper-pagination-bullet{
+	background: $textColor;
+}
+
+/* Fonts */
+

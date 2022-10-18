@@ -1,0 +1,79 @@
+@import "../mixins";
+@import "../variables";
+
+.clock{
+	position: relative;
+	font-family: $sans;
+	.clock-wrapper{
+		@include clearfix;
+		position: relative;
+		padding-right: 32px;
+		.tile{
+			.txt{
+				font-size: 18px;
+				text-transform: capitalize;
+			}
+			.days{
+				font-size: 72px;
+				line-height: 72px;
+				display: block;
+				width: 192px + 16px*2;
+				border-bottom: 2px solid $white;
+				@media(min-width: 601px){
+					font-size: 120px;
+					line-height: 120px;
+				}
+			}
+			.hours,
+			.minutes,
+			.seconds{
+				font-size: 32px;
+				line-height: 32px;
+				display: block;
+				width: 64px;
+				border-bottom: 2px solid $white;
+				@media(min-width: 601px){
+					font-size: 48px;
+					line-height: 48px;
+				}
+			}
+		}
+		
+		.tile-hours,
+		.tile-minutes,
+		.tile-seconds{
+			float: left;
+			margin-right: 16px;
+		}
+	}
+	// deco
+	&:before{
+		content: "";
+		position: absolute;
+		top: 36px;
+		left: auto;
+		right: 0;
+		height: 4px;
+		width: 33%;
+		border-top: 2px solid $white;
+		@media(min-width: 601px){
+			width: 64px;
+			top: 60px;
+		}
+	}
+	&:after{
+		content: "";
+		position: absolute;
+		top: 36px;
+		left: auto;
+		right: 0;
+		bottom: 27px;
+		width: 32px;
+		border: 2px solid $white;
+		border-top: none;
+		border-left: none;
+		@media(min-width: 601px){
+			top: 60px;
+		}
+	}
+}

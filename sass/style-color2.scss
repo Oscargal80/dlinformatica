@@ -1,0 +1,170 @@
+/* Alternative colors */
+$color1 : #ff5649;
+//$color1 : #9c3cf5;
+$white : #fff;
+$black : #1f1f1f;
+/* Header */
+.header-top{
+	background: $white;
+	height: 56px;
+	.logo-wrapper{
+		margin-top: 4px;
+	}
+	@media(min-width: 601px){
+		background: $white;
+		height: 64px;
+		.logo-wrapper{
+			margin-top: 8px;
+		}
+	}
+	.logo-wrapper{
+		.logo{
+			color: $color1;
+			.desc{
+				color: $black;
+			}
+		}
+	}
+}
+/* menu */
+.menu-icon {
+    background: transparentize($color1,1);
+    border-color: $color1;
+	top :	4px;
+}
+.menu-icon .bars .bar1, .menu-icon .bars .bar2, .menu-icon .bars .bar3{
+	background: $color1;
+}
+.menu-links{
+	@media(max-width: 600px){
+		top: 72px;
+	}
+	background: $white;
+	@media(min-width: 601px){
+		background: transparent;
+	}
+	.links{
+		padding-top: 32px;
+		@media(min-width: 601px){
+			padding-top: 16px;
+			background: transparent;
+		}
+		li{
+			a{
+				color: $black;
+				&:hover,
+				&.menu-visible,
+				&:active{
+					color: transparentize($white,0.6);
+					@media(min-width: 601px){
+						color: transparentize($color1,0.6);
+					}
+				}
+			}
+			&.cta{
+				a{
+					color: $color1;
+					border-color: $color1;
+					&:hover{
+						border-color: $color1;
+						background: transparentize($color1,0.9);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* clock */
+.clock:before{
+	border-top-color: $color1;
+}
+.clock:after{
+	border-color: $color1;
+}
+.clock .clock-wrapper .tile .days,
+.clock .clock-wrapper .tile .hours, 
+.clock .clock-wrapper .tile .minutes,
+.clock .clock-wrapper .tile .seconds{
+	border-bottom-color: $color1;
+}
+/* main page */
+.section .content .title-desc .title h2{
+	color: $white;
+}
+.section .content .title-desc h3,
+.section .content .item-desc h3,
+.section .content .c-features-list li h3{
+	//color: $color1;
+	color: $white;
+}
+.section-home .content .title-desc h3{
+	//color: #fff;
+}
+.section-contact .content .item-desc a,
+.section-contact .content .c-form .form .fields label.error{
+	color: $color1;
+}
+.section .content .c-features-list li:before{
+	background: $color1;
+}
+.section .content .c-features-list li:after{
+	border-color: $color1;
+}
+
+/* footer */
+.site-footer .note .marked,
+.site-footer .note a{
+	color: $color1;
+	text-decoration: underline;
+}
+.scrolldown a:after{
+	background: $color1;
+}
+.site-footer .subscription .form .input{
+	border-color: $color1;
+}
+/* Buttons */
+.magic-btn{
+	color: $color1;
+}
+.arrow-circ-btn .arrow-icon:before{
+	border-color: $color1;
+	border-left-color: transparent;
+}
+.arrow-circ-btn:hover .arrow-icon:after{
+	border-color: $color1;
+}
+.arrow-circ-btn:focus .arrow-icon:before, .arrow-circ-btn:hover .arrow-icon:before{
+	border-color: #fff;
+    border-left-color: transparent;
+}
+.circ-btn:before{
+	border-color: $color1;
+	border-top-color: transparent;
+}
+.circ-btn:hover:before{
+	border-color: #fff;
+	border-top-color: transparent;
+}
+.circ-btn:hover{
+	color: $color1;
+}
+/* Nav dots and Slider indication */
+#fp-nav ul li a.active span, 
+#fp-nav ul li a.active:hover span{
+	border-color: $color1;
+}
+.section .content .wrapper .swiper-pagination-bullet:hover, 
+.section .content .wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background: $color1;
+}
+.section .content .wrapper .swiper-pagination-bullet:hover:before,
+.section .content .wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+	border-color: $color1;
+}
+.section .content .wrapper .items-nav-container .items-button a:after{
+	background: $color1;
+}
+/* Fonts */
+

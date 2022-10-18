@@ -1,0 +1,240 @@
+@import "../mixins";
+@import "../variables";
+
+.site-footer{
+	@include clearfix;
+	position: relative;
+	margin-top: 32px;
+	//padding-left: 16px;
+	//padding-bottom: 16px;
+	@media(min-width: 601px){
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		padding-left: 64px;
+		padding-bottom: 32px;
+	}
+	z-index: 10;
+	.note{
+		float: left;
+		margin-left: 0px;
+		@media(min-width: 601px){
+			margin-left: 8px;
+		}
+		p{
+			font-size: $text-size;
+			//font-family: $sans;
+			//color: $white;
+			margin-bottom: 0;
+			transition: 0.3s;
+			@media(min-width: 601px){
+				font-size: $text-small;
+			}
+		}
+		.marked{
+			color: $color2;
+		}
+		@media(min-width: 601px){
+			margin-top: -2px;
+		}
+	}
+	.contact{
+		float: left;
+		position: relative;
+		&.s-right{
+			float: left;
+			right: auto;
+			left: 0;
+		}
+		.links{
+			
+		}
+		.socials{
+			display: block;
+			float: left;
+			li{
+				float: left;
+				margin-right: 24px;
+				position: relative;
+				a{
+					//@include circ-button($white);
+					cursor: pointer;
+				}
+				.circ-btn{
+					display: inline-block;
+					padding-top: 10px;
+				}
+			}
+		}
+	}
+	
+	// Subscription Form
+	.subscription{
+		float: left;
+		display: block;
+		@media(min-width: 601px){
+			float: right;
+			position: absolute;
+			right: 64px;
+			bottom: 32px;
+		}
+		
+		.title{
+			padding-top: 16px;
+			text-align: left;
+			font-size: $text-size;
+			font-family: $sans-serif;
+			@media(min-width: 601px){
+				text-align: right;
+				font-size: $text-small;
+			}
+		}
+		
+		p{
+			display: block;
+			float: none;
+			text-align: right;
+			padding-top: 8px;
+			margin-bottom: 0px;
+			font-size: $text-small;
+			max-width: 240px;
+			transition: 0.3s;
+			&.gone{
+				margin-bottom: 0;
+				display: none;
+			}
+		}
+		.form{
+			@include clearfix;
+			label{
+				bottom: 32px;
+				color: $white;
+				position: absolute;
+				left: 0;
+			}
+			.input{
+				float: left;
+				margin-right: 8px;
+				margin-bottom: 0;
+				width: 200px;
+				background: transparent;
+				//font-family: $sans;
+				font-size: $text-small;
+				color: $white;
+				border: none;
+				border-bottom: 2px solid $white;
+				box-shadow: none;
+				border-radius: 0;
+			}
+			.btn{
+				float: left;
+				cursor: pointer;
+				&:focus{
+					box-shadow: none;
+					outline: none;
+				}
+			}
+		}
+		
+		// Mailchimp embed form
+		#mc-embedded-subscribe-form{
+			@include clearfix;
+			label{
+				bottom: 32px;
+				color: $white;
+				left: 0;
+				@media (min-width:601px){
+					position: absolute;
+				}
+			}
+			.indicates-required{
+				display: none;	
+			}
+			input[type=text],
+			input[type=email]{
+				float: left;
+				margin-right: 8px;
+				margin-bottom: 0;
+				width: 240px;
+				background: transparent;
+				//font-family: $sans;
+				font-size: $text-small;
+				color: $white;
+				border: none;
+				border-bottom: 2px solid $white;
+				box-shadow: none;
+				border-radius: 0;
+				@media (min-width:601px){
+					padding-right: 80px;
+				}
+			}
+			input[type=submit],
+			.button,
+			.btn{
+				float: left;
+				cursor: pointer;
+				position: absolute;
+				background: transparentize($white,0.9);
+				right: 0;
+				bottom: 0px;
+				border: 2px solid $white;
+				border-radius: 2px;
+				//font-family: $sans;
+				font-size: $text-small;
+				margin-bottom: 0;
+				padding: 10px 8px;
+				&:focus{
+					box-shadow: none;
+					outline: none;
+				}
+			}
+		}
+	}
+	
+	.scrolldown{
+		display: none;
+	}
+}
+// fpNav scroll down
+.scrolldown{
+	position: absolute;
+    bottom: 100%;
+    margin-bottom: 32px;
+    right: 13px;
+	font-family: $sans-serif;
+    transform: rotate(-90deg);
+	a{
+		color: $white;
+		&:after{
+			position: absolute;
+			right: -16px;
+			height: 64px;
+			width: 2px;
+			content: "";
+			background: #fff;
+			transform: rotate(90deg);
+			transform-origin: bottom;
+			bottom: 12px;
+			transition: 0.3s;
+		}
+		&:hover{
+			&:after{
+				height: 32px;
+			}
+		}
+	}
+	
+}
+
+// Class added when section has class js-left-light
+body.left-light{
+	.note{
+		p{
+			@media(max-width: 801px){
+				// color: $medium-gray;
+			}
+		}
+	}
+}
